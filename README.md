@@ -1,2 +1,9 @@
-# BN-pen-regr
-learning Bayesian networks through global penalized regression
+# DAG with No Fear
+learning Bayesian networks 
+
+## Usages
+
+
+
+## Aknowledgement
+

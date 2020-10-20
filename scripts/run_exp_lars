@@ -1,0 +1,12 @@
+#!/bin/sh
+
+REPEAT=100
+METHOD="BPR_lars"
+NOISE_TYPE="linear-gauss"
+
+
+for NUM_VAR in 10 30 50 100; do
+        for DEGREE in 2 4; do
+                python main_efficient.py --data_variable_size="${NUM_VAR}" --repeat="${REPEAT}" --methods="${METHOD}" --graph_sem_type="${NOISE_TYPE}" --h_tol=1e-10 --pre_h_tol=1e-5 --graph_degree="${DEGREE}"
+        done
+done

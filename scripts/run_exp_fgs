@@ -1,0 +1,19 @@
+REPEAT=100
+METHOD="FGS"
+
+# NOISE_TYPE="linear-gauss"
+NOISE_TYPE="linear-gumbel"
+#NOISE_TYPE="linear-exp"
+#GRAPH_TYPE="erdos-renyi"
+GRAPH_TYPE="barabasi-albert"
+
+
+# sample_size = $((2*NUM_VAR))
+
+for NUM_VAR in 10; do
+    for ZERO_MEAN in 0 1; do
+            for DEGREE in 4; do
+                python main_efficient.py --data_variable_size="${NUM_VAR}" --repeat="${REPEAT}" --methods="${METHOD}" --graph_sem_type="${NOISE_TYPE}" --zero_mean="${ZERO_MEAN}" --h_tol=1e-10 --pre_h_tol=1e-5 --graph_degree="${DEGREE}" --data_sample_size=$((2*NUM_VAR))
+            done
+    done
+done

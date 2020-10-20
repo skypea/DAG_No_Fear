@@ -1,0 +1,18 @@
+REPEAT=100
+METHOD="PC"
+# NOISE_TYPE="linear-gauss"
+NOISE_TYPE="linear-gumbel"
+#NOISE_TYPE="linear-exp"
+#GRAPH_TYPE="erdos-renyi"
+GRAPH_TYPE="barabasi-albert"
+
+
+# sample_size = $((2*NUM_VAR))
+
+for NUM_VAR in 10 30 50 100; do
+    for ZERO_MEAN in 1; do
+            for DEGREE in 4; do
+                python ./src/main_clean.py --data_variable_size="${NUM_VAR}" --repeat="${REPEAT}" --graph_type="${GRAPH_TYPE}" --methods="${METHOD}" --graph_sem_type="${NOISE_TYPE}" --zero_mean="${ZERO_MEAN}" --h_tol=1e-10 --pre_h_tol=1e-5 --graph_degree="${DEGREE}" --search=3 --data_sample_size=1000
+            done
+    done
+done

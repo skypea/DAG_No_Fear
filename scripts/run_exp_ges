@@ -1,0 +1,11 @@
+REPEAT=100
+METHOD="GES"
+NOISE_TYPE="linear-gauss"
+
+for NUM_VAR in 10 30 50 100; do
+    for ZERO_MEAN in 1; do
+            for DEGREE in 2; do
+                python main_efficient.py --data_variable_size="${NUM_VAR}" --repeat="${REPEAT}" --methods="${METHOD}" --graph_sem_type="${NOISE_TYPE}" --zero_mean="${ZERO_MEAN}" --h_tol=1e-10 --pre_h_tol=1e-5 --graph_degree="${DEGREE}" --search=3 --data_sample_size=$((2*NUM_VAR))
+            done
+    done
+done

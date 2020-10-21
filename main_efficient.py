@@ -49,7 +49,7 @@ def get_args():
     parser.add_argument('--repeat', type=int, default= 100,
                         help='the number of times to run experiments to get mean/std')
 
-    parser.add_argument('--methods', type=str, default='BPR_lars',
+    parser.add_argument('--methods', type=str, default='all_l2',
                         choices=[
                                  # 'BPR_all_new', 'BPR_all_new_search',           # ****DO THIS*** new notear
                                  'BPR_lars',                                    # ***DO THIS*** local search only

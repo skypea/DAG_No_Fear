@@ -1,7 +1,6 @@
 #!/bin/sh
 
 REPEAT=100
-# METHOD="BPR_all_new"
 METHOD="all_l2"
 NOISE_TYPE="linear-gauss"
 

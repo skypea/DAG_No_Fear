@@ -3,7 +3,7 @@ learning Bayesian networks
 
 ## Usages
 
-![Overview](https://github.com/skypea/DAG_No_Fear/tree/master/image/Thumbnail.png?raw=true)
+![Overview](https://raw.githubusercontent.com/skypea/DAG_No_Fear/master/image/Thumbnail.png?token=AESIXBWJH7YFH5ACMCLYPX27R76EY)
 
 
 ## Aknowledgement
